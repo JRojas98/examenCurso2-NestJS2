@@ -16,7 +16,7 @@ export class AppService {
     return await response;
   }
   async obtenerUnArticulo(id :number) {
-    let response = this.repository.find({`_id:`});
+    let response = this.repository.findOne(id);
     return await response;
   }
   async agregarUnArticulo(datos){
@@ -24,11 +24,13 @@ export class AppService {
     return 'agregado  datos: ' + JSON.stringify(datos);
   }
 
-  editarUnArticulo(id, datos): any {
-    return 'actualizar: ' + id + ' datos: ' + JSON.stringify(datos);
+  async editarUnArticulo(id, datos: any){
+    let response = this.repository.update(id, datos);
+    return await response;
   }
-  eliminarUnArticulo(id): string {
-    return 'elimindo';
+  async eliminarUnArticulo(id) {
+    let response = this.repository.delete(id);
+    return await response;
   }
 
 

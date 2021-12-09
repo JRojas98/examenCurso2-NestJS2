@@ -29,9 +29,5 @@ export class CatalogoAvonRepository extends MongoRepository<catalogoAvon>{
         return await articulo.save();
     }
 
-
-    obtenerTodo(){}
-    obtenerUnArticulo(){}
     agregarUnArticuloeditarUnArticulo(){}
-    eliminarUnArticulo(){}
 }
