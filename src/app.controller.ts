@@ -5,10 +5,10 @@ import { CatalogoAvonDtos } from './dtos/CatalogoAvon.dto';
 
 @Controller('main')
 export class AppController {
-  constructor(private readonly appService: AppService) { }
+  constructor(private  appService: AppService) { }
 
   @ApiOperation({ summary: 'Obtiene todos los registros' })
-  @ApiResponse({ status: 200, type: CatalogoAvonDtos })
+  @ApiResponse({ status: 200, type: Object })
   @Get('/catalogoAvon')
   obtenerTodo() {
     return this.appService.obtenerTodo();
