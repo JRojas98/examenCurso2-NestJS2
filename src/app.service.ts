@@ -15,7 +15,7 @@ export class AppService {
     let response = this.repository.find({});
     return await response;
   }
-  async obtenerUnArticulo(id :number) {
+  async obtenerUnArticulo(id :string) {
     let response = this.repository.findOne(id);
     return await response;
   }
